@@ -249,6 +249,7 @@ class PriceV2 {
   static String _chooseRightOrderOnCurrencySymbol(Map<String, dynamic> json){
     String currencyString;
     switch(json['currencyCode']) {
+      case "IDR":
       case "INR": {
         currencyString = '${_simpleCurrencySymbols[json['currencyCode']]} ${json['amount']}';
       }
